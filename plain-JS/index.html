@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOB Game</title>
+  </head>
+  <body>
+    <script>
+      alert("Lets flip a coin to see who goes first");
+      let userChoice = prompt("Heads or Tails?").toLowerCase();
+      console.log("1", userChoice);
+
+      let coin = Math.random() < 0.5 ? "Heads" : "Tails";
+      console.log("2", coin);
+      let theResult = coin.toLowerCase();
+      console.log("3", theResult);
+
+      let theFirstPlayer;
+
+      if (theResult === userChoice) {
+        theFirstPlayer = "user";
+        alert(`Coin landed on ${coin}, you go first`);
+      } else {
+        theFirstPlayer = "server";
+        alert(`Coin landed on ${coin}, I go first`);
+      }
+
+      let counter = 1;
+
+      while (true) {
+        if (theFirstPlayer === "user") {
+          // alert
+          let userNum = prompt(`Enter the next number: (current number: ${counter - 1})`);
+
+          let expected = counter % 5 === 0 ? "HOB" : String(counter);
+          if (userNum !== expected) {
+            alert("you entered wrong number, you lost!");
+            break;
+          }
+          counter++;
+
+          let serverResponse = counter % 5 === 0 ? "HOB" : counter;
+          alert(`Server says: ${serverResponse}`);
+          counter++;
+        } else {
+          let serverResponse = counter % 5 === 0 ? "HOB" : counter;
+          alert(`Server says: ${serverResponse}`);
+          counter++;
+
+          let userNum = prompt(`Enter the next number: (current number: ${counter - 1})`);
+
+          let expected = counter % 5 === 0 ? "HOB" : String(counter);
+          if (userNum !== expected) {
+            alert("you entered wrong number, you lost!");
+            break;
+          }
+          counter++;
+        }
+      }
+    </script>
+  </body>
+</html>
