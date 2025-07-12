@@ -40,13 +40,13 @@ A simple interactive number game between a user and a server. Each side takes tu
 - Real-time bidirectional communication using WebSockets.
 - Frontend and backend communicate instantly via `socket.emit` and `socket.on`.
 
-📁 Frontend: `socketio/public/index.html`, `app.js`  
-📁 Backend: `socketio/server/server.js`
+📁 Frontend: `socket.io/public/index.html`, `app.js`  
+📁 Backend: `socket.io/server/server.js`
 
 Run:
 
 ```bash
-cd socketio/server
+cd socket.io/server
 npm install
 nodemon server.js
 ```
@@ -58,13 +58,13 @@ nodemon server.js
 - Backend logic written in Python using FastAPI.
 - CORS enabled so frontend JS can `fetch()` from a separate HTML file.
 
-📁 Backend: `fastapi/server/main.py`  
-📁 Frontend: `fastapi/public/index.html`, `app.js`
+📁 Backend: `python/server/main.py`  
+📁 Frontend: `python/public/index.html`, `app.js`
 
 Run:
 
 ```bash
-cd fastapi/server
+cd python/server
 pip install fastapi uvicorn
 uvicorn main:app --reload --port 8000
 ```
