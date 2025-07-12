@@ -31,7 +31,7 @@ A simple interactive number game between a user and a server. Each side takes tu
 
 📁 Frontend: `ajax/public/index.html`, `app.js`  
 📁 Backend (Node): `ajax/server/server.js`  
-📁 Backend (Python): `fastapi/server/main.py`
+📁 Backend (Python): `python/server/main.py`
 
 ---
 
