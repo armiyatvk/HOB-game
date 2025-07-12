@@ -19,13 +19,6 @@ io.on("connection", (socket) => {
   socket.on("userNum", (msg) => {
     const expected = counter % 5 === 0 ? "HOB" : String(counter);
     console.log(msg);
-    // if (msg == counter) {
-    //   counter++;
-    //   socket.emit("serverNum", counter);
-    //   counter++;
-    // } else {
-    //   socket.emit("gameOver", "Wrong number entered");
-    // }
     if (msg !== expected) {
       socket.emit("gameOver", "Wrong number entered");
       return;
